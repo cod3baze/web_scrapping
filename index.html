@@ -31,7 +31,9 @@
         const data = await response.json();
 
         const htmllist = data
-          .map(({ src }) => `<li><img src="${src}" /></li>`)
+          .map(
+            ({ src }) => `<li><img src="${src}" alt="instagram photos" ></li>`
+          )
           .join("");
 
         document.querySelector(".container").innerHTML = htmllist;
